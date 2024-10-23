@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congresso Azusa IDPB</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #004080;
+            padding: 40px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0066cc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            padding: 16px 24px;
+            display: block;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #004080;
+            color: #fff;
+        }
+
+        section {
+            display: none;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h2 {
+            color: #004080;
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Música tocando ao carregar o site -->
+    <audio autoplay loop>
+        <source src="VEM ME BUSCAR.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+    </audio>
+
+    <header>
+        <h1>Congresso da IDPB - Seja Bem-vindo!</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showTab('convite')">Convite</a>
+        <a href="#" onclick="showTab('programacao')">Programação</a>
+    </nav>
+
+    <section id="convite" class="active">
+        <h2>Convite para o Congresso</h2>
+        <p>Olá Danilo, com grande alegria convidamos você para o nosso Congresso Azusa da IDPB, que será realizado no dia 9 de novembro. Será um tempo de edificação, louvor e comunhão. Contamos com a sua presença !</p>
+        <p><strong>Local:</strong> Rua Belgrado, 235, Parque Vitória- Franco da Rocha <br><strong>Horário:</strong> 17:00</p>
+    </section>
+
+    <section id="programacao">
+        <h2>Programação</h2>
+        <ul>
+            <li><strong>Dia 9 de novembro:</strong></li>
+            <ul>
+                <li>17:00 - Abertura e Louvor</li>
+                <li>18:00 - Oportunidades</li>
+                <li>19:00 - Pausa</li>
+                <li>20:00 - Pregação</li>
+                <li>21:00 - Encerramento</li>
+            </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Congresso da IDPB - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
